@@ -11,8 +11,10 @@ public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "location_id", nullable = false)
-    private Integer jobId;
+    private Integer locationId;
 
     @Column(name = "city", length = 30)
     private String city;
+
+
 }

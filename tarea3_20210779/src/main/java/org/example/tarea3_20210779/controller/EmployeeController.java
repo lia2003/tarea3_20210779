@@ -5,6 +5,7 @@ import org.example.tarea3_20210779.repository.EmployeeRepository;
 import org.example.tarea3_20210779.entity.Employee;
 import java.util.List;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
@@ -32,7 +33,15 @@ public class EmployeeController {
         model.addAttribute("employees", employees);
 
         // Retorna el nombre del archivo HTML que se encargará de mostrar la lista
-        return "lista_empleados";
+        return "Employee/lista_empleados";
     }
+
+    @PostMapping("/new")
+    public String createEmployees(Model model) {
+        //aca debe ir el codigo de como crear employees
+
+        return "Employee/nuevo_empleado";
+    }
+
 
 }

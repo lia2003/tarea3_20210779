@@ -10,10 +10,11 @@ import lombok.Setter;
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "job_id", nullable = false)
-    private Integer jobId;
+    @Column(name = "job_id", length = 10)
+    private String jobId;
 
-    @Column(name = "job_title", length = 20)
+    @Column(name = "job_title", length = 35)
     private String jobTitle;
+
 
 }

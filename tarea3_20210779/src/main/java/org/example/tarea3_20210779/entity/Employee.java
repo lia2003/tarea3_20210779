@@ -28,8 +28,5 @@ public class Employee {
     @JoinColumn(name = "department_id")
     private Department department;
 
-    @ManyToOne
-    @JoinColumn(name = "location_id")
-    private Location location;
 
 }
